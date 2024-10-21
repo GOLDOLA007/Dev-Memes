@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/Roma-Favicon.png" type="image/x-icon">
+    <title>Dev Memes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Fundo claro */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        #memesDestaque{
+            width: 30%;
+            height: 60%;
+        }
+        #faq{
+            margin-bottom: 50px;
+        }
+        .navbar {
+            background-color: #FF3D00; /* Laranja vibrante */
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: #FFC107 !important; /* Amarelo */
+        }
+        h2 {
+            margin-top: 20px;
+            color: #FF3D00; /* Laranja */
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Toque cômico */
+        }
+        .card {
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card-body{
+            text-align: center;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            color: #FF3D00; /* Laranja */
+            font-weight: bold;
+        }
+        .carousel-item img {
+            border-radius: 10px;
+            height: 300px; /* Altura fixa para imagens do carrossel */
+            object-fit: cover;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #FF3D00; /* Laranja */
+        }
+        .btn-primary {
+            background-color: #FFC107; /* Amarelo */
+            border-color: #FFC107;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #e0a800; /* Amarelo mais escuro ao passar o mouse */
+            border-color: #e0a800;
+        }
+        .accordion-button {
+            font-weight: bold;
+            background-color: #FFC107; /* Amarelo */
+            color: #333;
+        }
+        .accordion-button:hover {
+            background-color: #FFD600; /* Amarelo mais claro ao passar o mouse */
+        }
+        .funny-icon {
+            font-size: 1.5em; /* Tamanho maior para ícones engraçados */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Container -->
+<div class="container mt-5">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Dev Memes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formulario">Enviar Meme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#memes">Memes da Semana</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galeriaMemes">Galeria de Memes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulário -->
+    <div id="formulario" class="mt-4">
+        <h2>📸 Envie seu Meme!</h2>
+        <form>
+            <div class="form-group">
+                <label for="memeTitle">Título do Meme</label>
+                <input type="text" class="form-control" id="memeTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="memeImage">URL da Imagem</label>
+                <input type="url" class="form-control" id="memeImage" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Cards -->
+    <div id="memes" class="mt-4">
+        <h2>🎉 Memes da Semana</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagens/backend-2.jpg" class="card-img-top" alt="Meme 1">
+                    <div class="card-body">
+                        <h5 class="card-title">2° Lugar 🥈</h5>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagens/e54a462a322ef1ae6a9d50d652e6af66.jpg" class="card-img-top" alt="Meme 2">
+                    <div class="card-body">
+                        <h5 class="card-title">1° Lugar 🥇</h5>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagens/frontEndMeme1.jpg" class="card-img-top" alt="Meme 3">
+                    <div class="card-body">
+                        <h5 class="card-title">3° Lugar 🥉</h5>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrossel -->
+    <div id="carrossel" class="mt-4">
+        <h2 id="galeriaMemes">🖼️ Galeria de Memes</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img id="memesDestaque" src="imagens/programmerhumor-io-backend-memes-frontend-memes-9051f2e7daf98e7-608x413.jpg" class="d-block w-100" alt="Meme 1">
+                </div>
+                <div class="carousel-item">
+                    <img id="memesDestaque" src="imagens/images.jpg" class="d-block w-100" alt="Meme 2">
+                </div>
+                <div class="carousel-item">
+                    <img id="memesDestaque" src="imagens/1637996615996.jpg" class="d-block w-100" alt="Meme 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+
+     <!-- Accordion -->
+     <div id="faq" class="mt-4">
+        <h2>❓ Dúvidas Frequentes</h2>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            O que são memes?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Memes são imagens, vídeos ou textos que são compartilhados e alterados de maneira viral na internet.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Como posso criar um meme?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Você pode usar ferramentas online ou aplicativos de edição de imagem para criar memes personalizados.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+</div>
+
+<!-- Scripts do Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
